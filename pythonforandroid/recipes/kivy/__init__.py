@@ -8,7 +8,7 @@ from pythonforandroid.toolchain import current_directory, shprint
 
 class KivyRecipe(CythonRecipe):
     version = '2.1.0'
-    url = 'https://github.com/kivy/kivy/archive/{version}.zip'
+    url = 'https://github.com/kivy/kivy/archive/refs/heads/master.zip'
     name = 'kivy'
 
     depends = ['sdl2', 'pyjnius', 'setuptools']
