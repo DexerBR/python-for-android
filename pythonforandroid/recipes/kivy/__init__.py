@@ -9,7 +9,6 @@ from pythonforandroid.toolchain import current_directory, shprint
 class KivyRecipe(IncludedFilesBehaviour, CythonRecipe):
     version = None
     url = None
-    name = 'kivy'
     src_filename = '../kivy_develop'
 
     depends = ['sdl2', 'pyjnius', 'setuptools']
