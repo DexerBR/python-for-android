@@ -6,7 +6,7 @@ from pythonforandroid.recipe import CythonRecipe, IncludedFilesBehaviour
 from pythonforandroid.toolchain import current_directory, shprint
 
 
-class AndroidRecipe(IncludedFilesBehaviour, CythonRecipe):
+class KivyRecipe(IncludedFilesBehaviour, CythonRecipe):
     version = None
     url = None
     name = 'kivy'
