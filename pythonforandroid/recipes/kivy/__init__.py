@@ -2,14 +2,15 @@ import glob
 from os.path import basename, exists, join
 
 import sh
-from pythonforandroid.recipe import CythonRecipe
+from pythonforandroid.recipe import CythonRecipe, IncludedFilesBehaviour
 from pythonforandroid.toolchain import current_directory, shprint
 
 
-class KivyRecipe(CythonRecipe):
-    version = '2.1.0'
-    url = 'https://github.com/DexerBR/kivy/archive/test_1.zip'
+class AndroidRecipe(IncludedFilesBehaviour, CythonRecipe):
+    version = None
+    url = None
     name = 'kivy'
+    src_filename = '../kivy_dev'
 
     depends = ['sdl2', 'pyjnius', 'setuptools']
     python_depends = ['certifi']
