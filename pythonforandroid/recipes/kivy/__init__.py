@@ -21,10 +21,10 @@ def is_kivy_affected_by_deadlock_issue(recipe=None, arch=None):
         ) < packaging.version.Version("2.2.0.dev0")
 
 
-class KivyRecipe(CythonRecipe):
-    version = '2.1.0'
-    url = 'https://github.com/kivy/kivy/archive/{version}.zip'
-    name = 'kivy'
+class KivyRecipe(IncludedFilesBehaviour, CythonRecipe):
+    version = None
+    url = None
+    src_filename = '../../../../../../../../kivy_develop'
 
     depends = ['sdl2', 'pyjnius', 'setuptools']
     python_depends = ['certifi']
