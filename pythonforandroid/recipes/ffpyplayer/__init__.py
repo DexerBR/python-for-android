@@ -1,11 +1,13 @@
-from pythonforandroid.recipe import CythonRecipe
+from pythonforandroid.recipe import CythonRecipe, IncludedFilesBehaviour
 from pythonforandroid.toolchain import Recipe
 from os.path import join
 
 
-class FFPyPlayerRecipe(CythonRecipe):
-    version = 'v4.3.2'
-    url = 'https://github.com/matham/ffpyplayer/archive/{version}.zip'
+class FFPyPlayerRecipe(IncludedFilesBehaviour, CythonRecipe):
+    version = None
+    url = None
+    src_filename = '../../../../../../../../ffpyplayer_develop'
+
     depends = ['python3', 'sdl2', 'ffmpeg']
     opt_depends = ['openssl', 'ffpyplayer_codecs']
 
