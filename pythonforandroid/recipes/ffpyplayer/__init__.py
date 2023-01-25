@@ -6,7 +6,8 @@ from os.path import join
 class FFPyPlayerRecipe(IncludedFilesBehaviour, CythonRecipe):
     version = None
     url = None
-    src_filename = '../../../../../../../../ffpyplayer_develop'
+    src_filename = '../../../../../../../../../../ffpyplayer_develop'
+    
 
     depends = ['python3', 'sdl2', 'ffmpeg']
     opt_depends = ['openssl', 'ffpyplayer_codecs']
