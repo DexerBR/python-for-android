@@ -7,8 +7,8 @@ class PyAV(CythonRecipe):
     version = 'v10.0.0'
     url = 'https://github.com/PyAV-Org/PyAV/archive/v10.0.0.zip'
 
-    depends = ['ffmpeg']
-    opt_depends = ['av_codecs']
+    depends = ['python3', 'ffmpeg']
+    opt_depends = ['openssl', 'av_codecs']
 
     def get_recipe_env(self, arch, with_flags_in_cc=True):
         env = super().get_recipe_env(arch)
