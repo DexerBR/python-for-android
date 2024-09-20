@@ -5,7 +5,7 @@ from pythonforandroid.recipe import CythonRecipe
 class PyAVRecipe(CythonRecipe):
 
     name = "av"
-    version = "10.0.0"
+    version = "13.0.0"
     url = "https://github.com/PyAV-Org/PyAV/archive/v{version}.zip"
 
     depends = ["python3", "cython", "ffmpeg", "av_codecs"]
